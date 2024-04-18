@@ -34,6 +34,16 @@ function checkInput(data) {
     return true;
 }
 
+function checkInput(data) {
+    let name = data.name;
+    let id = data.id
+    if (id === ""|| name === "") {
+        alert("Please enter input ID and Name! ");
+        return false;
+    } 
+    return true;
+}
+
 // Hàm kiểm tra ID đã tồn tại hay chưa trong danh sách động vật
 function checkUnique(id) {
     for (let i = 0; i < petArr.length; i++) {
