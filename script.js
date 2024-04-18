@@ -30,16 +30,7 @@ function checkInput(data) {
     if (data.id === "") {
         alert("Please enter input ID!");
         return false;
-    } else if (isNaN(id)) {
-        alert("ID must be a number!");
-        return false;
-    } else if (id <= 0) {
-        alert("ID must be greater than 0!");
-        return false;
-    } else if (id !== Math.floor(id)) {
-        alert("ID must not be a decimal!");
-        return false;
-    }
+    } 
     return true;
 }
 
@@ -171,7 +162,6 @@ function validateData(data) {
     return false;
 }
 
-
 // Thêm sự kiện khi người dùng nhấn nút submit
 submitBtn.addEventListener('click', function(e) {
     const data = {
@@ -196,10 +186,6 @@ submitBtn.addEventListener('click', function(e) {
     if (validate) {
         addPet(data);
         clearInput();
-        // if (data.heathyPet.dewormed 
-        //     && data.heathyPet.sterilized
-        //     && data.heathyPet.vaccinated) 
-        //     heathyPetArr.push(data);
     }
 });
 

@@ -58,36 +58,3 @@ importBtn.addEventListener('click', function() {
         alert('No file selected. Please select a file for import.');
     }
 });
-
-// // Đặt sự kiện nhấn nút import
-// importBtn.addEventListener('click', function() {
-//     // Trigger the 'click' event on the importInput element
-//     importInput.click();
-// });
-
-// importInput.addEventListener('change', function(e) {
-//     const file = e.target.files[0];
-//     if (file) {
-//         const reader = new FileReader();
-//         reader.onload = function(e) {
-//             const newPets = JSON.parse(e.target.result);
-            
-//             newPets.forEach(newPet => {
-//                 // Tìm thú cưng có ID khớp với thú cưng mới
-//                 const existingPet = petArr.find(pet => pet.id === newPet.id);
-//                 if (existingPet) {
-//                     // Nếu thú cưng đã tồn tại, ghi đè giá trị
-//                     Object.assign(existingPet, newPet);
-//                 } else {
-//                     // Nếu thú cưng mới, thêm vào mảng
-//                     petArr.push(newPet)
-//                 }
-//             });
-
-//             // Cập nhật localStorage
-//             saveToStorage("petArr", petArr);
-//             alert('Data imported successfully')
-//         };
-//         reader.readAsText(file);
-//     }
-// });

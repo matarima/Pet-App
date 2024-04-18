@@ -59,7 +59,6 @@ function renderBreed(breeds) {
         const option = document.createElement('option');
         option.text = breed.name;
         breedInput.appendChild(option);
-
     });
 }
 
@@ -67,12 +66,8 @@ function renderBreed(breeds) {
 function clearInput() {
     idInput.value = "";
     nameInput.value = "";
-    typeInput.value = "Select Type";
-    ageInput.value = "";
-    weightInput.value = "";
-    lengthInput.value = "";
-    breedInput.value = "Select Breed";
-    colorInput.value = "#000000";
+    typeInput.value = "";
+    breedInput.value = "";
     vaccinatedInput.checked = false;
     sterilizedInput.checked = false;
     dewormedInput.checked = false;
@@ -89,8 +84,8 @@ function findPets() {
     const isSterilized = sterilizedInput.checked;
   
     const filteredPets = petArr.filter(pet => {
-        const idMatch = !id || pet.id.includes(id);
-        const nameMatch = !name || pet.name.toLowerCase().includes(name.toLowerCase());
+        const idMatch = !id || pet.id.toLowerCase().includes(id);
+        const nameMatch = !name || pet.name.toLowerCase().includes(name);
         const typeMatch = !type || pet.type === type;
         const breedMatch = !breed || pet.breed === breed;
         const vaccinatedMatch = !isVaccinated || pet.heathyPet.vaccinated;
